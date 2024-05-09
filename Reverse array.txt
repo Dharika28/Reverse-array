@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class Main
+
+{
+
+                public static void main(String[] args) {
+
+                    Scanner sc=new Scanner(System.in);
+
+                    String s=sc.nextLine();
+
+                    char ch[]=s.toCharArray();
+
+                    for(int i=0,j=s.length()-1;i<=j;i++,j--){
+
+                        while(!(ch[i]>='A'&&ch[i]<='Z')&& !(ch[i]>='a'&&ch[i]<='z')){
+
+                            i++;
+
+                        }
+
+                        while(!(ch[j]>='A'&&ch[j]<='Z')&& !(ch[j]>='a'&&ch[j]<='z')){
+
+                            j--;
+
+                        }
+
+                        char c=ch[i];
+
+                        ch[i]=ch[j];
+
+                        ch[j]=c;
+
+                    }
+
+                    for(int i=0;i<ch.length;i++){
+
+                                System.out.print(ch[i]);
+
+                    }
+
+                }
+
+}
